@@ -46,7 +46,7 @@ def build_arima(series, exovar=None, diff=0, max_p=5, max_q=5):
                 #print('p=' + str(p) + ' ' + 'q=' + str(q))
                 #print(model_fit.arparams)
                 for param in model_fit.arparams:
-                    if math.isnan(p):
+                    if math.isnan(param):
                         aic_matrix[p, q] = CONST_INVALID_AIC
                         break
             else:
